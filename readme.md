@@ -12,9 +12,7 @@ Can be used by Studends or Anyone.
 - No privacy issues
 
 ## Cons:
-- No mobile support
 - No dark mode
-- No score
 - No leaderboard
 
 >**but can be always improved or modified to make it better.**
