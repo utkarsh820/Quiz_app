@@ -17,7 +17,7 @@ Can be used by Studends or Anyone.
 - No score
 - No leaderboard
 
--**but can always improve or modify it to make it better.**
+>**but can be always improved or modified to make it better.**
 
 ---
 # How to use:
