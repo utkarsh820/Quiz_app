@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Interpretation Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <header class="quiz-header">
+        <h1 id="quiz-title">Quiz Loading...</h1>
+        <div class="quiz-meta">
+          <div class="timer-container">
+            <svg
+              class="timer-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span id="timer">00:00</span>
+          </div>
+          <div class="progress-container">
+            <span id="current-question-num">1</span> /
+            <span id="total-questions">10</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="quiz-content">
+        <div id="input-screen" class="screen active">
+          <div class="input-content">
+            <h2>Paste Your Quiz JSON</h2>
+            <p>Paste the JSON code below to generate your quiz.</p>
+            <textarea
+              id="json-input"
+              placeholder='{ "Quiz": [ ... ] }'
+            ></textarea>
+            <div id="error-msg" class="error-msg hidden">
+              Invalid JSON format
+            </div>
+            <button id="load-btn" class="btn primary-btn">Load Quiz</button>
+          </div>
+        </div>
+
+        <div id="start-screen" class="screen hidden">
+          <div class="start-content">
+            <h2>Ready to test your knowledge?</h2>
+            <p>
+              You have <span id="q-count-start">10</span> questions to answer.
+              Good luck!
+            </p>
+
+            <div class="settings-container">
+              <div class="setting-item">
+                <label class="switch">
+                  <input type="checkbox" id="timer-toggle" checked />
+                  <span class="slider round"></span>
+                </label>
+                <span>Enable Timer</span>
+              </div>
+              <div class="setting-item" id="timer-duration-container">
+                <label for="timer-duration">Duration (min):</label>
+                <input
+                  type="number"
+                  id="timer-duration"
+                  value="10"
+                  min="1"
+                  max="60"
+                />
+              </div>
+            </div>
+
+            <button id="start-btn" class="btn primary-btn">Start Quiz</button>
+            <button
+              id="back-to-input-btn"
+              class="btn secondary-btn"
+              style="margin-top: 10px"
+            >
+              Load Different Quiz
+            </button>
+          </div>
+        </div>
+
+        <div id="question-screen" class="screen hidden">
+          <div class="question-card">
+            <h2 id="question-text">Question goes here?</h2>
+            <div id="options-container" class="options-list">
+              <!-- Options injected here -->
+            </div>
+          </div>
+
+          <div id="explanation-container" class="explanation-card hidden">
+            <div class="explanation-header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              <span>Explanation</span>
+            </div>
+            <p id="explanation-text">Explanation text goes here.</p>
+          </div>
+
+          <div class="controls">
+            <button id="quit-btn" class="btn secondary-btn" style="width: auto;">Quit Quiz</button>
+            <button id="next-btn" class="btn primary-btn" disabled>Next Question</button>
+          </div>
+        </div>
+
+        <div id="result-screen" class="screen hidden">
+          <div class="result-card">
+            <div class="score-circle">
+              <svg viewBox="0 0 36 36" class="circular-chart">
+                <path
+                  class="circle-bg"
+                  d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <path
+                  class="circle"
+                  stroke-dasharray="0, 100"
+                  d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <text x="18" y="20.35" class="percentage">0%</text>
+              </svg>
+            </div>
+            <h2>Quiz Completed!</h2>
+            <p>
+              You scored <span id="final-score">0</span> out of
+              <span id="total-score">10</span>
+            </p>
+            <button id="restart-btn" class="btn primary-btn">Try Again</button>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

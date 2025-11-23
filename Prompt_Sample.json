@@ -1,0 +1,76 @@
+{
+  "Title": "Sample Quiz",
+  "Type": "quiz",
+  "Quiz": [
+    {
+      "type": "singleSelect",
+      "Question": "Which of the following is a supervised learning algorithm?",
+      "Options": ["K-Means", "Linear Regression", "PCA", "DBSCAN"],
+      "Answer": [1],
+      "Explanation": "Linear Regression is a supervised algorithm."
+    },
+    {
+      "type": "singleSelect",
+      "Question": "What is the capital of France?",
+      "Options": ["Berlin", "Madrid", "Paris", "Rome"],
+      "Answer": [2],
+      "Explanation": "Paris is the capital of France."
+    },
+    {
+      "type": "singleSelect",
+      "Question": "Python list is which type of data structure?",
+      "Options": ["Mutable", "Immutable", "Static", "Compiled"],
+      "Answer": [0],
+      "Explanation": "Lists in Python are mutable."
+    },
+    {
+      "type": "singleSelect",
+      "Question": "Which one is an even number?",
+      "Options": ["11", "17", "22", "33"],
+      "Answer": [2],
+      "Explanation": "22 is even."
+    },
+    {
+      "type": "singleSelect",
+      "Question": "Which ML metric is used for classification?",
+      "Options": ["MSE", "Accuracy", "RMSE", "MAE"],
+      "Answer": [1],
+      "Explanation": "Accuracy is used for classification."
+    },
+    {
+      "type": "singleSelect",
+      "Question": "What is the synonym of 'happy'?",
+      "Options": ["Sad", "Joyful", "Angry", "Tired"],
+      "Answer": [1],
+      "Explanation": "Joyful means happy."
+    },
+    {
+      "type": "singleSelect",
+      "Question": "Which symbol is used for comments in Python?",
+      "Options": ["//", "#", "/* */", "<!-- -->"],
+      "Answer": [1],
+      "Explanation": "# is used for comments in Python."
+    },
+    {
+      "type": "singleSelect",
+      "Question": "In DI: If a class has 40 students and 10 are absent, how many are present?",
+      "Options": ["20", "25", "30", "35"],
+      "Answer": [3],
+      "Explanation": "40 - 10 = 30 present."
+    },
+    {
+      "type": "singleSelect",
+      "Question": "Which one is a programming language?",
+      "Options": ["HTML", "CSS", "Python", "JSON"],
+      "Answer": [2],
+      "Explanation": "Python is a programming language."
+    },
+    {
+      "type": "singleSelect",
+      "Question": "Which of the following animals can fly?",
+      "Options": ["Dog", "Cat", "Elephant", "Eagle"],
+      "Answer": [3],
+      "Explanation": "Eagle can fly."
+    }
+  ]
+}
